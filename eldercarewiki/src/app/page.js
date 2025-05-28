@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import AuthButtons from "./components/auth/AuthButtons";
+import AccessibleButton from "./components/ui/AccessibleButton";
 import { useState } from "react";
 
 export default function Home() {
@@ -38,6 +39,22 @@ export default function Home() {
 
       <section className="relative h-[500px] bg-amber-700" id="home">
         <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center text-amber-50">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 font-sans">
+              Elder Care Services
+            </h1>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Find trusted services and support in your community
+            </p>
+            <AccessibleButton
+              variant="primary"
+              size="large"
+              onClick={() => window.location.href = '/services'}
+              className="bg-amber-600 hover:bg-amber-500"
+            >
+              🔍 Find Services Near You
+            </AccessibleButton>
+          </div>
         </div>
       </section>
 
